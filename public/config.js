@@ -4,7 +4,7 @@
 window.ENV = {
   // Backend API URL - will be different for each environment
   // Development: http://localhost:3000
-  // Production: https://your-backend.onrender.com (set this after deploying backend)
+  // Production: https://your-app.up.railway.app (REPLACE WITH YOUR ACTUAL RAILWAY URL)
   BACKEND_URL: 'http://localhost:3000',
   
   // You can add more configuration here
@@ -14,8 +14,8 @@ window.ENV = {
 
 // Auto-detect environment based on hostname
 if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-  // Production mode - update this URL after deploying backend to Render
-  // Example: window.ENV.BACKEND_URL = 'https://nestjs-datidashi.onrender.com';
+  // Production mode - update this URL after deploying backend to Railway
+  // Example: window.ENV.BACKEND_URL = 'https://nestjs-datidashi.up.railway.app';
   console.log('🌍 Running in PRODUCTION mode');
   console.log('⚠️ Remember to update BACKEND_URL in config.js after deploying backend!');
 } else {

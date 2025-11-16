@@ -22,7 +22,7 @@ async function bootstrap() {
         'http://localhost:4000', 
         'http://localhost:3000',
         /\.vercel\.app$/,
-        /\.onrender\.com$/,
+        /\.railway\.app$/,
         ...(process.env.FRONTEND_DOMAIN ? [process.env.FRONTEND_DOMAIN] : [])
       ],
       credentials: true,
