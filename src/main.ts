@@ -13,20 +13,19 @@ import validationOptions from './utils/validation-options';
 import { AllConfigType } from './config/config.type';
 import { ResolvePromisesInterceptor } from './utils/serializer.interceptor';
 import * as express from 'express';
-import { join } from 'path';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { 
+  const app = await NestFactory.create(AppModule, {
     cors: {
       origin: [
-        'http://localhost:4000', 
+        'http://localhost:4000',
         'http://localhost:3000',
         /\.vercel\.app$/,
         /\.railway\.app$/,
-        ...(process.env.FRONTEND_DOMAIN ? [process.env.FRONTEND_DOMAIN] : [])
+        ...(process.env.FRONTEND_DOMAIN ? [process.env.FRONTEND_DOMAIN] : []),
       ],
       credentials: true,
-    }
+    },
   });
   useContainer(app.select(AppModule), { fallbackOnErrors: true });
   const configService = app.get(ConfigService<AllConfigType>);
@@ -43,7 +42,7 @@ async function bootstrap() {
       exclude: ['/'],
     },
   );
-  
+
   // Serve static files - COMMENTED FOR SEPARATED ARCHITECTURE (Vercel + Render)
   // Uncomment these lines for local testing only
   // expressApp.use(
@@ -52,16 +51,16 @@ async function bootstrap() {
   // );
   // expressApp.use('/js', express.static(join(__dirname, '..', 'public', 'js')));
   // expressApp.use('/html', express.static(join(__dirname, '..', 'public', 'html')));
-  
+
   // Redirect routes - COMMENTED FOR SEPARATED ARCHITECTURE
   // expressApp.get('/', (req: any, res: any) => {
   //   res.redirect('/html/index.html');
   // });
-  
+
   // expressApp.get('/login', (req: any, res: any) => {
   //   res.redirect('/html/login.html');
   // });
-  
+
   // expressApp.get('/admin', (req: any, res: any) => {
   //   res.redirect('/html/admin.html');
   // });
