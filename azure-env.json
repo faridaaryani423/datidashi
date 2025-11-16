@@ -1,0 +1,102 @@
+[
+  {
+    "name": "NODE_ENV",
+    "value": "production"
+  },
+  {
+    "name": "DATABASE_TYPE",
+    "value": "postgres"
+  },
+  {
+    "name": "DATABASE_HOST",
+    "value": "ep-sparkling-scene-ad0gdtgu-pooler.c-2.us-east-1.aws.neon.tech"
+  },
+  {
+    "name": "DATABASE_PORT",
+    "value": "5432"
+  },
+  {
+    "name": "DATABASE_USERNAME",
+    "value": "neondb_owner"
+  },
+  {
+    "name": "DATABASE_PASSWORD",
+    "value": "npg_n92jxqepGkLS"
+  },
+  {
+    "name": "DATABASE_NAME",
+    "value": "neondb"
+  },
+  {
+    "name": "DATABASE_SSL_ENABLED",
+    "value": "true"
+  },
+  {
+    "name": "APP_PORT",
+    "value": "8080"
+  },
+  {
+    "name": "API_PREFIX",
+    "value": "api"
+  },
+  {
+    "name": "APP_FALLBACK_LANGUAGE",
+    "value": "id"
+  },
+  {
+    "name": "APP_HEADER_LANGUAGE",
+    "value": "x-custom-lang"
+  },
+  {
+    "name": "AUTH_JWT_SECRET",
+    "value": "0739d1301f40a43ee1ec2c1df92307da08ca85ce656c7cf53ed10754593cbc75"
+  },
+  {
+    "name": "AUTH_JWT_TOKEN_EXPIRES_IN",
+    "value": "15m"
+  },
+  {
+    "name": "AUTH_REFRESH_SECRET",
+    "value": "0abd52050eb5e4be1ecdbe7e87dbe43faf56d4282f9b339920a97769d20b0e8a"
+  },
+  {
+    "name": "AUTH_REFRESH_TOKEN_EXPIRES_IN",
+    "value": "45d"
+  },
+  {
+    "name": "MAIL_HOST",
+    "value": "localhost"
+  },
+  {
+    "name": "MAIL_PORT",
+    "value": "1025"
+  },
+  {
+    "name": "MAIL_USER",
+    "value": "test@example.com"
+  },
+  {
+    "name": "MAIL_PASSWORD",
+    "value": "test"
+  },
+  {
+    "name": "MAIL_DEFAULT_EMAIL",
+    "value": "noreply@example.com"
+  },
+  {
+    "name": "MAIL_DEFAULT_NAME",
+    "value": "Api"
+  },
+  {
+    "name": "FILE_DRIVER",
+    "value": "local"
+  },
+  {
+    "name": "WORKER_HOST",
+    "value": "redis://127.0.0.1:6379/1"
+  },
+  {
+    "name": "SCM_DO_BUILD_DURING_DEPLOYMENT",
+    "value": "true"
+  }
+]
