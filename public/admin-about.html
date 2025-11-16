@@ -99,32 +99,32 @@
       </div>
       
       <nav class="p-3 flex flex-col">
-        <a href="/html/admin.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
+        <a href="/admin.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
           <i class="fas fa-chart-line w-5 mr-3"></i>
           <span>Dashboard</span>
         </a>
         
-        <a href="/html/admin-products.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
+        <a href="/admin-products.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
           <i class="fas fa-box w-5 mr-3"></i>
           <span>Products</span>
         </a>
         
-        <a href="/html/admin-pricings.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
+        <a href="/admin-pricings.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
           <i class="fas fa-dollar-sign w-5 mr-3"></i>
           <span>Pricing</span>
         </a>
         
-        <a href="/html/admin-features.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
+        <a href="/admin-features.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
           <i class="fas fa-star w-5 mr-3"></i>
           <span>Features</span>
         </a>
         
-        <a href="/html/admin-about.html" class="flex items-center px-4 py-3 mb-2 bg-blue-600 text-white rounded-lg transition-all duration-200 font-medium">
+        <a href="/admin-about.html" class="flex items-center px-4 py-3 mb-2 bg-blue-600 text-white rounded-lg transition-all duration-200 font-medium">
           <i class="fas fa-info-circle w-5 mr-3"></i>
           <span>About</span>
         </a>
         
-        <a href="/html/admin-members.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
+        <a href="/admin-members.html" class="flex items-center px-4 py-3 mb-2 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all duration-200 font-medium">
           <i class="fas fa-users w-5 mr-3"></i>
           <span>Team Members</span>
         </a>
@@ -250,7 +250,7 @@
     async function loadAbout() {
       const token = localStorage.getItem('authToken');
       if (!token) {
-        window.location.href = '/html/login.html';
+        window.location.href = '/login.html';
         return;
       }
 
@@ -302,7 +302,7 @@
           }
         } else if (response.status === 401) {
           localStorage.removeItem('authToken');
-          window.location.href = '/html/login.html';
+          window.location.href = '/login.html';
         }
       } catch (error) {
         console.error('Error loading about:', error);
@@ -313,3 +313,4 @@
   </script>
 </body>
 </html>
+

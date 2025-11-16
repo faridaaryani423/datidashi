@@ -29,16 +29,16 @@
       </a>
 
       <nav class="nav-grid" id="nav-menu">
-        <a href="/html/index.html#hero" class="nav-item">Home</a>
-        <a href="/html/index.html#about-section" class="nav-item">About</a>
-        <a href="/html/index.html#struktur-section" class="nav-item">Team</a>
-        <a href="/html/index.html#produk-section" class="nav-item">Products</a>
-        <a href="/html/index.html#feature-section" class="nav-item">Features</a>
-        <a href="/html/index.html#pricing-section" class="nav-item">Pricing</a>
+        <a href="/index.html#hero" class="nav-item">Home</a>
+        <a href="/index.html#about-section" class="nav-item">About</a>
+        <a href="/index.html#struktur-section" class="nav-item">Team</a>
+        <a href="/index.html#produk-section" class="nav-item">Products</a>
+        <a href="/index.html#feature-section" class="nav-item">Features</a>
+        <a href="/index.html#pricing-section" class="nav-item">Pricing</a>
         
         <!-- Mobile Only: Login & Theme Toggle -->
         <div class="mobile-only-menu">
-          <a href="/html/login.html" class="nav-item login-mobile">🔐 Login</a>
+          <a href="/login.html" class="nav-item login-mobile">🔐 Login</a>
           <div class="theme-toggle-mobile">
             <button onclick="setTheme('light')" class="theme-btn-mobile">☀️ Light</button>
             <button onclick="setTheme('dark')" class="theme-btn-mobile">🌙 Dark</button>
@@ -51,7 +51,7 @@
         <button onclick="setTheme('dark')">Dark</button>
       </div>
 
-      <a href="/html/login.html" class="login-btn">Login</a>
+      <a href="/login.html" class="login-btn">Login</a>
 
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
@@ -232,7 +232,7 @@
 
           // Redirect to admin page after 1 second
           setTimeout(() => {
-            window.location.href = '/html/admin.html';
+            window.location.href = '/admin.html';
           }, 1000);
         } else {
           // Show error message
@@ -263,10 +263,11 @@
         // Verify token is still valid
         const expiry = localStorage.getItem('tokenExpiry');
         if (expiry && new Date(expiry) > new Date()) {
-          window.location.href = '/html/admin.html';
+          window.location.href = '/admin.html';
         }
       }
     });
   </script>
 </body>
 </html>
+
