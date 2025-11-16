@@ -1,15 +1,7 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "src/main.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "src/main.ts"
-    }
+  "rewrites": [
+    { "source": "/", "destination": "/html/index.html" },
+    { "source": "/login", "destination": "/html/login.html" },
+    { "source": "/admin", "destination": "/html/admin.html" }
   ]
 }
