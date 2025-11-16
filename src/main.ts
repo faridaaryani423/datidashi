@@ -98,8 +98,10 @@ async function bootstrap() {
     res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
   });
 
-  const port = configService.getOrThrow('app.port', { infer: true });
-  // Listen on 0.0.0.0 for Railway (required for container networking)
+  // Azure injects PORT env variable, use it or fallback to config
+  const port =
+    process.env.PORT || configService.getOrThrow('app.port', { infer: true });
+  // Listen on 0.0.0.0 for cloud platforms (Azure, Railway, etc)
   await app.listen(port, '0.0.0.0');
 
   console.log(`Application is running on: http://0.0.0.0:${port}`);
