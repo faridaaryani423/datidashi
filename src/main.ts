@@ -94,6 +94,15 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('docs', app, document);
 
-  await app.listen(configService.getOrThrow('app.port', { infer: true }));
+  // Health check endpoint for Railway
+  expressApp.get('/health', (req: any, res: any) => {
+    res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+  });
+
+  const port = configService.getOrThrow('app.port', { infer: true });
+  // Listen on 0.0.0.0 for Railway (required for container networking)
+  await app.listen(port, '0.0.0.0');
+  
+  console.log(`Application is running on: http://0.0.0.0:${port}`);
 }
 void bootstrap();
