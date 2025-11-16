@@ -101,7 +101,7 @@ async function bootstrap() {
   const port = configService.getOrThrow('app.port', { infer: true });
   // Listen on 0.0.0.0 for Railway (required for container networking)
   await app.listen(port, '0.0.0.0');
-  
+
   console.log(`Application is running on: http://0.0.0.0:${port}`);
 }
 void bootstrap();
