@@ -20,6 +20,7 @@ async function bootstrap() {
       origin: [
         'http://localhost:4000',
         'http://localhost:3000',
+        'https://datidashi-mauve.vercel.app',
         /\.vercel\.app$/,
         /\.railway\.app$/,
         ...(process.env.FRONTEND_DOMAIN ? [process.env.FRONTEND_DOMAIN] : []),

@@ -14,10 +14,9 @@ window.ENV = {
 
 // Auto-detect environment based on hostname
 if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-  // Production mode - update this URL after deploying backend to Railway
-  // Example: window.ENV.BACKEND_URL = 'https://nestjs-datidashi.up.railway.app';
+  // Production mode - Railway backend
+  window.ENV.BACKEND_URL = 'https://web-production-aed1c.up.railway.app';
   console.log('🌍 Running in PRODUCTION mode');
-  console.log('⚠️ Remember to update BACKEND_URL in config.js after deploying backend!');
 } else {
   console.log('💻 Running in DEVELOPMENT mode');
 }
