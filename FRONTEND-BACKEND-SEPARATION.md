@@ -19,7 +19,7 @@ Backend sekarang hanya menyediakan REST API endpoints tanpa server-side renderin
 #### Frontend Controller (`src/frontend/frontend.controller.ts`)
 - **Sebelum**: Menggunakan `@Render` untuk home dan login pages
 - **Sesudah**: Return JSON dari API endpoint
-  - `GET /api/frontend/company-profile` - Company profile data
+  - `GET /api/company-profile` - Company profile data
 
 ### 2. Frontend (Static HTML)
 Frontend sekarang adalah file HTML statis yang fetch data dari API.
@@ -28,7 +28,7 @@ Frontend sekarang adalah file HTML statis yang fetch data dari API.
 Lokasi: `public/html/`
 
 1. **index.html** - Homepage
-   - Fetch data dari `/api/frontend/company-profile`
+   - Fetch data dari `/api/company-profile`
    - Menampilkan: About, Team, Products, Features, Pricing
    - Layout dan CSS: SAMA PERSIS dengan versi Handlebars
 
@@ -137,7 +137,7 @@ Setiap halaman admin mengikuti pola yang sama:
 Untuk testing setelah deployment:
 
 1. Akses homepage: `http://localhost:3000/` → redirect ke `/html/index.html`
-2. Data harus ter-load dari API: `/api/frontend/company-profile`
+2. Data harus ter-load dari API: `/api/company-profile`
 3. Login: `http://localhost:3000/login` → redirect ke `/html/login.html`
 4. Setelah login, akses admin: `http://localhost:3000/admin` → redirect ke `/html/admin.html`
 5. Stats harus ter-load dari API: `/api/admin/stats`

@@ -193,7 +193,7 @@
     async function loadCompanyData() {
       try {
         const BACKEND_URL = window.ENV?.BACKEND_URL || 'http://localhost:3000';
-        console.log('🔵 Fetching from:', `${BACKEND_URL}/apicompany-profile`);
+        console.log('🔵 Fetching from:', `${BACKEND_URL}/api/company-profile`);
         const response = await fetch(`${BACKEND_URL}/api/company-profile`);
         const data = await response.json();
         console.log('✅ Data received from Backend:', data);
