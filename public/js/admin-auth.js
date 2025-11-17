@@ -6,7 +6,7 @@ function checkAuth() {
   const token = localStorage.getItem('authToken');
   if (!token) {
     // Redirect to login if not authenticated
-    window.location.href = '/login';
+    window.location.href = '/login.html';
     return false;
   }
   return true;
