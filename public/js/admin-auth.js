@@ -25,7 +25,7 @@ function getAuthToken() {
 // Logout function
 function logout() {
   localStorage.removeItem('authToken');
-  window.location.href = '/login';
+  window.location.href = '/login.html';
 }
 
 // Add auth header to fetch requests
